@@ -13,5 +13,5 @@
 
 module.exports = {
     outputDir: './docs',
-    publicPath: '/introPage2-master_day_2/'
+    publicPath: '/<introPage2-master_day_2>/'
 }

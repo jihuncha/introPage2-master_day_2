@@ -18,13 +18,30 @@ Vue.config.productionTip = false;
 // 슬라이드 플러그인
 Vue.use(VueGlide);
 
-new Vue({
+const app = new Vue({
   router,
-  render: (h) => h(App),
+  render: h => h(App),
+  created () {
+      if (sessionStorage.redirect) {
+          const redirect = sessionStorage.redirect
+          delete sessionStorage.redirect
+          this.$router.push(redirect)
+      }
+  },
   mounted() {
     AOS.init();
   },
-}).$mount("#app");
+})
+
+app.$mount('#app')
+
+// new Vue({
+//   router,
+//   render: (h) => h(App),
+//   mounted() {
+//     AOS.init();
+//   },
+// }).$mount("#app");
 
 // const app = new Vue({
 //   router,

@@ -12,7 +12,7 @@
         /> -->
         <div>
           <div class="main_txt_area">
-            <h2 style="font-size: 3.5rem">Welcome Hero</h2>
+            <!-- <h2 style="font-size: 3.5rem">Welcome Hero</h2>
             <div class="waviy">
               <span style="--i: 1">S</span>
               <span style="--i: 2">a</span>
@@ -28,7 +28,7 @@
               <span style="--i: 8">r</span>
               <span style="--i: 8">l</span>
               <span style="--i: 8">d</span>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -133,7 +133,19 @@
           <div class="slide-arrow slide-next-wrap" data-glide-dir=">">&gt;</div>
         </template>
       </vue-glide>
+
     </section>
+
+    <!-- about story slide  -->
+    <div style="padding: 1rem 1.5rem">
+      <section class="about-road-map" style="padding-left: 1.5rem">
+        <h3 class="roadmap_txt" style="color: #fff; font-size: 1.7rem">
+            Roadmap
+        </h3>
+        <div class ="roadmap_container">
+        </div>
+      </section>
+    </div>
   </div>
 </template>
 
@@ -170,7 +182,7 @@ header {
 .main_container {
   width: 100%;
   height: 700px;
-  background-image: url("../../src/assets/main.jpg");
+  background-image: url("../../src/assets/main_back_logo.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
@@ -236,6 +248,19 @@ h3 {
 
 .aboutStory_txt::after {
   content: "About Story";
+  display: flex;
+  transform: rotateX(180deg);
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 10%,
+    rgba(255, 255, 255, 0.5)
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.roadmap_txt::after {
+  content: "Roadmap";
   display: flex;
   transform: rotateX(180deg);
   background-image: linear-gradient(
@@ -344,4 +369,15 @@ h3 {
 .slide-next-wrap {
   right: -0.7rem;
 }
+
+/* 로드맵 영역 */
+.roadmap_container {
+  width: 100%;
+  height: 700px;
+  background-image: url("../../src/assets/roadmap.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+}
+
 </style>
